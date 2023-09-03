@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+@import url("css/reg.css")
+
+</style>
+</head>
+<body>
+<h3> List Your FPO</h3>
+<form action="farmerreg.php" method="post" >
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.FPO_Name.value == "") { alert('FPO name is required.'); frm.FPO_Name.focus(); return false; }
+if (frm.Owner_Name.value == "") { alert('Owner name is required.'); frm.Owner_Name.focus(); return false; }
+if (frm.ComapnyEmail_Address.value == "") { alert('CompanyEmail address is required.'); frm.CompanyEmail_Address.focus(); return false; }
+if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.CompanyEmail_Address.focus(); return false; }
+if (frm.Position.value == "") { alert('Position is required.'); frm.Position.focus(); return false; }
+if (frm.Phone.value == "") { alert('Phone is required.'); frm.Phone.focus(); return false; }
+return true; }
+</script>
+<table align="center" border="0" cellpadding="9" cellspacing="0">
+<tr> <td style="width: 50%">
+<label for="FPO_Name"><b>FPO name *</b></label><br />
+<input name="FPO_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> <td style="width: 50%">
+<label for="owner_Name"><b>Owner name *</b></label><br />
+<input name="owner_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="CompanyEmail_Address"><b>Company Mail *</b></label><br />
+<input name="CompanyEmail_Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Website"><b>Company website</b></label><br />
+<input name="Website" type="text" maxlength="255" value="http://" style="width:100%;max-width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Address"><b>Company Address *</b></label><br />
+<input name="Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+</td> </tr> <tr> <td>
+<label for="City"><b>City</b></label><br /> <input name="City" type="text" maxlength="50" style="width:100%;max-width: 260px" /> </td> <td>
+<label for="State"><b>State</b></label><br />
+<input name="State" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> </tr> <tr> <td>
+<label for="Phone"><b>Phone *</b></label><br />
+<input name="Phone" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> 
+<td>
+<label for="Pin Code"><b>Pin Code *</b></label><br />
+<input name="Pin" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> 
+
+<tr> <td colspan="2">
+<label for="Reference"><b>Description About Your FPO</b></label><br />
+<textarea name="Description" rows="7" cols="40" style="width:100%;max-width: 535px"></textarea>
+</td> </tr> <tr> <td colspan="2" style="text-align: center;">
+
+<input name="skip_submit" type="submit" value="List FPO" />
+</td> </tr>
+</table>
+</form>
+</body>
+</html>
